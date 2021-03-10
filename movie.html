@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Portabla format ISGB13</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  </head>
+  <body>
+    <header>
+    <!-- Navbaren med länkar till musik och film sidorna -->
+    <nav class="navbar bg-dark fixed-top">
+      <h1>Movie OMDb</h1>
+      <ul>
+        <li><a href="music.html">Music Last FM</a></li>
+        <li class="active"><a href="#">Movies OMDb</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- Rosa huvudcontainern som innehåller allting på sidan -->
+    <div class="container-fluid thumbnail-movie">
+    <div class="container">
+      <form action="movie.html" class="form-group" method="post" id="search-form">
+        <!-- Label för sökfältet -->
+        <label for="search" class="sr-only">Search countries</label>
+        <div class="input-group col-sm-4">
+          <!-- Sökrutan och sökknappen -->
+          <input type="search" id="search" autocomplete="off" placeholder="Enter movie name..." class="form-control">
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-danger"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <!-- Responsiv tabell där sökresultaten visas -->
+            <div id="content" class="my-4 table-responsive">
+              <table class="table table-fixed" id="table">
+                <thead>
+                  <tr>
+                    <th>Movie Cover</th>
+                    <th>Movie Title</th>
+                    <th>Year</th>
+                  </tr>
+                </thead>
+                <!-- Error diven där felmeddelandet presenteras -->
+                <div id="errorDiv"></div>
+                <!-- Bodyn där tabellen byggs upp -->
+                <tbody id="tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+    <footer>
+      <h1>Portabla Format ISGB13</h1>
+      <h1>Fredrik & Rasmus</h1>
+    </footer>
+    <script src="js/xml.js"></script>
+  </body>
+</html>

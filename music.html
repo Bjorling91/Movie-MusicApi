@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Portabla format ISGB13</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="css/style.css" rel="stylesheet">
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- Skapar upp vår navigeringsmeny med bootstrap klassen navbar bg-dark fixed-top där vi länkar till vår XML sida -->
+  <header>
+    <nav class="navbar bg-dark fixed-top">
+      <h1>Last FM</h1>
+      <ul>
+        <li class="active"><a href="#">Music Last FM</a></li>
+        <li><a href="movie.html">Movies OMDb</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- Skapar upp vår main-container där vi lägger sökformuläret, table, och den datan vi hämtar från lastfm -->
+    <div class="container-fluid thumbnail">
+      <div class="container">
+        <form action="music.html" class="form-group" method="post" id="search-form">
+          <label for="search" class="sr-only">Search countries</label>
+          <div class="input-group col-sm-4">
+            <input type="search" id="search" autocomplete="off" placeholder="Enter album or artist..." class="form-control">
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-danger"><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+        </form>
+        <!-- Här presenteras datan som hämtas från lastfm  -->
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="card">
+              <div class="my-4 table-responsive">
+                <table class="table table-fixed" id="table">
+                  <thead>
+                    <tr>
+                      <th>Album Cover</th>
+                      <th>Album Name</th>
+                      <th>Artist</th>
+                    </tr>
+                  </thead>
+                  <!-- Skapar ett id ed errorDiv som refereras till json.js där vi skapar ett felmeddelande  -->
+                  <div id="errorDiv"></div>
+                  <tbody id="tbody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- Skapar upp vår sideTable där vi presenterar top 10 artists -->
+          <div class="col-lg-3">
+            <div class="card">
+              <div class="my-4 table-responsive">
+                <table class="table table-fixed" id="sideTable">
+                  <thead>
+                    <tr>
+                      <th>Top 10 Artists</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody id="sideTbody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <h1>Portabla Format ISGB13</h1>
+    <h1>Fredrik & Rasmus</h1>
+  </footer>
+  <script src="js/json.js">
+  </script>
+</body>
+
+</html>

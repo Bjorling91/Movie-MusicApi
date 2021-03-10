@@ -1,0 +1,64 @@
+/* Allting på sidan har fonten Josefin Sans */
+*{
+	font-family: 'Josefin Sans', cursive;
+}
+/* Texten i navbaren och footern */
+h1{
+	font-family: 'Josefin Sans', cursive;
+	color: #fff;
+	text-align: center;
+}
+/* Hålelr kvar navbaren i toppen på sidan */
+.fixed-top{
+	position: sticky;
+}
+/* Navigationen i navbaren */
+.navbar li {
+	color: #fff;
+	display: inline;
+	padding: 10px;
+	font-family: 'Montserrat', cursive;
+	font-size: 1.75rem;
+}
+/* Varje länk i navigationen */
+a{
+	text-decoration: none;
+	color: #fff;
+}
+/* Varje länk i navbaren vid hover */
+a:hover{
+	text-decoration: none;
+	color: #c6c6c6;
+}
+/* När länker i navigationen är aktiv */
+.active {
+	text-decoration: underline;
+}
+/* Bakgrunden på music sidan */
+.thumbnail-music {
+	background-color: lightblue;
+	height: auto;
+	width: 100%;
+}
+/* Bakgrunden på movie sidan */
+.thumbnail-movie {
+	background-color: pink;
+	height: auto;
+	width: 100%;
+}
+.card {
+	margin-bottom: 1rem;
+}
+/* Sökfältet */
+.input-group{
+	padding: 10px;
+}
+/* Footern */
+footer {
+	clear: both;
+	position: relative;
+ 	width:100%;
+	padding: 10px;
+	text-align: center;
+	background-color: #343a40;
+}
